@@ -29,7 +29,7 @@ class cryptoTest {
 
      /**
      * AES加密
-     * @param {string} data 加密数据
+     * @param {string} data 需要加密的内容
      * @param {string} secretKey 加密密码
      * javascript 默认是 PKCS7Padding 填充
      */
@@ -50,8 +50,8 @@ class cryptoTest {
     
     /**
      * AES解密
-     * @param {string} data 
-     * @param {string} secretKey 
+     * @param {string} data 需要解密的内容
+     * @param {string} secretKey 解密密码
      */
     static decry(data, secretKey) {
         const algorithm = 'aes-128-ecb';
@@ -70,7 +70,7 @@ class cryptoTest {
 
     /**
      * MD5加密
-     * @param {string} data 
+     * @param {string} data 需要加密的内容
      */
     static md5(data) {        
         try {
@@ -90,7 +90,7 @@ class cryptoTest {
 
     /**
      * sha1加密 (加密固定，不可逆)
-     * @param {string} data 
+     * @param {string} data 需要加密的内容
      */
     static sha1(data) {        
         try {
@@ -102,4 +102,5 @@ class cryptoTest {
         }
     }
 }
+
 module.exports = cryptoTest;
